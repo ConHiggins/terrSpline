@@ -56,11 +56,14 @@ for (let iy = 0; iy < widthSteps; iy++) { // the idea taken from PlaneBufferGeom
 }
 ribbonGeom.setIndex(indices);
 ribbonGeom.computeVertexNormals();
+ribbonGeom.setDrawRange(0,100)
 
 var ribbon = new THREE.Mesh(ribbonGeom, new THREE.MeshNormalMaterial({
   side: THREE.DoubleSide
 }));
 scene.add(ribbon);
+
+
 
 var line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), new THREE.LineBasicMaterial({
   color: "red",
@@ -117,8 +120,11 @@ tLoader.load(hMap, (hMap)=>{
 const ambLight = new THREE.AmbientLight(0xffffff,1);
 scene.add(ambLight);
 
-
+let ribbDR = 100;
 function animate() {
+
+    ribbDR++;
+    ribbonGeom.setDrawRange(0,ribbDR)
 
     //if(terrain) terrain.rotation.y += 0.01
 	renderer.render( scene, camera );
