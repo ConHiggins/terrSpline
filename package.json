@@ -8,6 +8,9 @@
     "vite": "^5.2.13"
   },
   "scripts": {
-    "start": "npx vite"
-  }
+    "build": "vite build",
+    "start": "npx vite",
+    "deploy": "gh-pages -d dist"
+  },
+  "homepage": "https://ConHiggins.github.io/terrSpline"
 }
