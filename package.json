@@ -12,5 +12,5 @@
     "start": "npx vite",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://ConHiggins.github.io/terrSpline"
+  "homepage": "https://conhiggins.github.io/terrSpline"
 }
